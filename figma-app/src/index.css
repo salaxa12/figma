@@ -1,0 +1,49 @@
+.landing-banner {
+  height: 50vh;
+}
+
+.main {
+  height: 100vh;
+}
+
+.landing-logo {
+  width: 112px;
+  height: 18px;
+  margin-bottom: 5%;
+}
+h5 {
+}
+
+.landing-button {
+  margin-top: 5%;
+  background-color: #63a0eb !important;
+  border-radius: 5px;
+  border: none;
+  color: white;
+  padding-top: 2%;
+  padding-bottom: 2%;
+}
+
+.landing-button-area {
+  margin-top: 4%;
+}
+
+@media screen and (max-width: 390px) {
+  .landing-logo {
+    width: 112px;
+    height: 18px;
+    margin-bottom: 25%;
+  }
+
+  .landing-button {
+    margin-top: 5%;
+
+    font-size: 20px;
+    height: 60px;
+  }
+
+  .landing-button-area {
+    width: 100%;
+    margin-top: 20%;
+  }
+}
