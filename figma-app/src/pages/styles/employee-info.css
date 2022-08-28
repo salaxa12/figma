@@ -1,0 +1,55 @@
+/* * {
+  border: solid;
+} */
+
+body {
+  background-color: #f6f6f6;
+}
+
+nav {
+  margin-top: 5%;
+}
+
+.nav-link {
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 24px;
+  padding-right: 2%;
+  padding-left: 2%;
+}
+
+.main {
+  margin-top: 3%;
+  background-color: white;
+  height: auto;
+  padding-right: 15%;
+  padding-left: 15%;
+  padding-top: 5%;
+  padding-bottom: 3%;
+}
+
+.form-segment {
+  margin-top: 5%;
+}
+
+.form-button {
+  margin-top: 5%;
+  background-color: #63a0eb !important;
+  border-radius: 5px;
+  border: none;
+  color: white;
+  padding-top: 2%;
+  padding-bottom: 2%;
+  padding-left: 40px;
+  padding-right: 40px;
+}
+
+hr {
+  color: black;
+  border: 1px solid;
+}
+
+footer {
+  margin-top: 5%;
+  margin-bottom: 5%;
+}
