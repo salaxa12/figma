@@ -1,24 +1,34 @@
 import React from "react";
 import "./styles/employee-info.css";
 import logo from "../media/LOGO-2.png";
+import back from "../media/back-icon.png";
 
 function employeeInfo(props) {
   return (
     <div className="d-flex flex-column align-items-center justify-content-center container">
-      <nav className="d-flex justify-content-center col-12">
-        <a href="#" className="nav-link ">
-          თანამშრომლის ინფო
+      <nav className="justify-content-center col-12">
+        <button className="btn back-button">
+          <img src={back} alt="back icon" width="9.21px" height="16px"></img>
+        </button>
+        <a href="#" className="nav-link text-center">
+          თ<span>ანამშრომლის ინფ</span>ო
         </a>
 
-        <a href="#" className="nav-link ">
+        <a href="#" className="nav-link text-center laptop-desc">
           ლეპტოპის მახასიათებელი
         </a>
+
+        <p
+          className="align-item-center text-center page-marker"
+          style={{ color: "gray" }}
+        >
+          1/2
+        </p>
       </nav>
-      <hr></hr>
-      <div className="col-10 main">
+      <div className="col-lg-10 col-md-10 col-sm-12 main">
         <form>
           <div className="col-12 row form-segment">
-            <div className="col-6">
+            <div className="col-lg-6 col-md-6 col-sm-12">
               <div className="mb-3 col-12">
                 <label htmlFor="exampleInputEmail1" className="form-label">
                   სახელი
@@ -35,7 +45,7 @@ function employeeInfo(props) {
                 </div>
               </div>
             </div>
-            <div className="col-6">
+            <div className="col-lg-6 col-md-6 col-sm-12">
               <div className="mb-3 col-12">
                 <label htmlFor="exampleInputEmail1" className="form-label">
                   გვარი
@@ -55,8 +65,13 @@ function employeeInfo(props) {
           </div>
 
           <div className="col-12 form-segment">
-            <select class="form-select" aria-label="Default select example">
-              <option selected>თიმი</option>
+            <select
+              class="form-select emp-select"
+              aria-label="Default select example"
+            >
+              <option selected disabled hidden>
+                თიმი
+              </option>
               <option value="1">One</option>
               <option value="2">Two</option>
               <option value="3">Three</option>
@@ -64,7 +79,10 @@ function employeeInfo(props) {
           </div>
 
           <div className="col-12 form-segment">
-            <select class="form-select" aria-label="Default select example">
+            <select
+              class="form-select emp-select"
+              aria-label="Default select example"
+            >
               <option selected>პოზიცია</option>
               <option value="1">One</option>
               <option value="2">Two</option>
@@ -102,8 +120,11 @@ function employeeInfo(props) {
                 aria-describedby="emailHelp"
                 placeholder="+995 598 00 07 01"
               />
-              <div id="emailHelp" className="form-text">
+              <div id="phoneHelp" className="form-text">
                 უნდა აკმაყოფილებდეს ქართული მობ-ნომრის ფორმატს
+              </div>
+              <div id="phoneHelpMobile" className="form-text d-none">
+                ქართული მობ-ნომრის ფორმატი
               </div>
             </div>
           </div>
