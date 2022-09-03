@@ -14,7 +14,7 @@ function employeeInfo(props) {
           თ<span>ანამშრომლის ინფ</span>ო
         </a>
 
-        <a href="#" className="nav-link text-center laptop-desc">
+        <a href="#" className="nav-link text-center inactive-page">
           ლეპტოპის მახასიათებელი
         </a>
 
@@ -25,7 +25,7 @@ function employeeInfo(props) {
           1/2
         </p>
       </nav>
-      <div className="col-lg-10 col-md-10 col-sm-12 main">
+      <div className="col-lg-8 col-md-8 col-sm-12 main">
         <form>
           <div className="col-12 row form-segment">
             <div className="col-lg-6 col-md-6 col-sm-12">

@@ -1,0 +1,170 @@
+.form-label {
+  margin-bottom: 6px !important;
+  height: 21px;
+}
+
+p {
+  margin-bottom: 0;
+}
+
+.emp-select {
+  margin-top: 27px;
+}
+
+.hard-drive-select {
+  margin-top: 12px;
+}
+
+.form-check-inline {
+  display: inline-block;
+  margin-right: 60px;
+}
+
+.form-button-back {
+  margin-top: 5%;
+  background-color: white !important;
+  border-radius: 5px;
+  border: none;
+  color: #63a0eb !important;
+  padding-top: 2%;
+  padding-bottom: 2%;
+  padding-left: 40px;
+  padding-right: 40px;
+}
+
+.drop-zone {
+  max-width: 1000px;
+  height: 500px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  font-family: "Quicksand", sans-serif;
+  font-weight: 500;
+  font-size: 20px;
+  color: #62a1eb;
+  border: 4px dashed #62a1eb;
+  border-radius: 10px;
+}
+
+.drop-zone--over {
+  border-style: solid;
+}
+
+.drop-zone--submited {
+  border-style: none;
+}
+
+.dropzone-hint {
+  margin-bottom: 65px;
+}
+
+.dropzone-content-mobile {
+  display: none;
+}
+
+.photo-name {
+  overflow: hidden;
+}
+
+.photo-name {
+  overflow: hidden;
+}
+
+.photo-size {
+  color: gray;
+}
+
+.photo-content {
+  display: flex !important;
+}
+
+.drop-zone-resubmit-div {
+  display: flex !important;
+}
+.photo-content-mobile {
+  display: none !important;
+}
+
+.drop-zone-resubmit-div-mobile {
+  display: none !important;
+}
+
+@media screen and (max-width: 390px) {
+  .dropzone-content {
+    display: none;
+  }
+
+  .dropzone-content-mobile {
+    display: block;
+  }
+
+  .drop-zone {
+    height: 244px;
+  }
+
+  .dropzone-hint-mobile {
+    font-size: 16px;
+  }
+
+  .emp-select {
+    margin-top: 10px;
+    margin-bottom: 15px;
+  }
+
+  .photo-size {
+    display: none !important;
+  }
+
+  .drop-zone-resubmit {
+    font-size: 18px;
+    padding-top: 12px;
+    padding-bottom: 12px;
+    padding-left: 10px;
+    padding-right: 10px;
+    /* width: 50%; */
+  }
+
+  .photo-content {
+    display: none !important;
+  }
+
+  .photo-icon {
+    display: none !important;
+  }
+
+  .drop-zone-resubmit-div {
+    display: none !important;
+  }
+  .photo-content-mobile {
+    display: flex !important;
+  }
+
+  .drop-zone-resubmit-div-mobile {
+    display: flex !important;
+  }
+
+  .photo-name-mobile {
+    overflow: hidden;
+    font-size: 12px;
+    height: 20px;
+    /* width: 80px; */
+    /* width: 50%; */
+  }
+
+  .photo-size-mobile {
+    overflow: hidden;
+    font-size: 12px;
+    /* width: 50%; */
+    color: gray;
+  }
+
+  .photo-name {
+    display: none !important;
+  }
+
+  .photo-size {
+    display: none !important;
+  }
+}
