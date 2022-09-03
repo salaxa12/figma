@@ -1,0 +1,67 @@
+.list-card {
+  border: 1px solid;
+  border-color: #aed1ea;
+  border-radius: 10px;
+  background-color: #eafaff;
+  padding: 14px;
+  margin: 30px;
+}
+
+p.list-card-owner {
+  margin-top: 6%;
+  font-size: 18px;
+}
+
+p.list-card-CPU {
+  margin-top: 18px;
+  font-size: 18px;
+}
+
+.list-card-link {
+  margin-top: 40px;
+  font-size: 16px;
+  display: block;
+  color: #4386a9;
+}
+
+.list-content {
+  margin-top: 5%;
+}
+
+@media screen and (max-width: 390px) {
+  .list-title {
+    font-size: 16px;
+  }
+
+  .list-content {
+    margin-top: 5%;
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+
+  .list-card {
+    padding: 7px;
+    margin-top: 13px;
+  }
+
+  .list-card-image {
+    height: 109px;
+  }
+
+  p.list-card-owner {
+    margin-top: 6%;
+    font-size: 14px;
+  }
+
+  p.list-card-CPU {
+    margin-top: 8px;
+    font-size: 18px;
+  }
+
+  .list-card-link {
+    margin-top: 11px;
+    font-size: 14px;
+    display: block;
+    color: #4386a9;
+  }
+}
