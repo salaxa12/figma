@@ -91,6 +91,15 @@ p {
   display: none !important;
 }
 
+.lower-modal {
+  margin-top: 80px;
+}
+
+.modal-content {
+  width: 847px !important;
+  height: 537px !important;
+}
+
 @media screen and (max-width: 390px) {
   .dropzone-content {
     display: none;
@@ -166,5 +175,21 @@ p {
 
   .photo-size {
     display: none !important;
+  }
+
+  .modal-dialog {
+    margin: 0 !important;
+  }
+
+  .modal-content {
+    height: 100vh !important;
+  }
+
+  .modal-main {
+    margin-top: 40%;
+  }
+
+  .lower-modal {
+    margin-top: 60%;
   }
 }

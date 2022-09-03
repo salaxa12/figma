@@ -5,6 +5,7 @@ import logo from "../media/LOGO-2.png";
 import success from "../media/success.png";
 import camera from "../media/camera.png";
 import back from "../media/back-icon.png";
+import confetti from "../media/confetti.png";
 
 export default function LaptopDesc(props) {
   function bytesToSize(bytes) {
@@ -380,14 +381,58 @@ export default function LaptopDesc(props) {
             </div>
           </div>
           <div className="d-flex flex-row-reverse justify-content-between col-12 form-segment">
-            <button className="btn form-button">შემდეგი</button>
-            <button className="btn form-button-back">უკან</button>
+            <button
+              type="button"
+              className="btn form-button"
+              data-bs-toggle="modal"
+              data-bs-target="#staticBackdrop"
+            >
+              შემდეგი
+            </button>
+            <button type className="btn form-button-back">
+              უკან
+            </button>
           </div>
         </form>
       </div>
       <footer>
         <img src={logo} alt="logo" width="85" height="85"></img>
       </footer>
+      {/* modal */}
+
+      <div
+        class="modal fade"
+        id="staticBackdrop"
+        data-bs-backdrop="static"
+        data-bs-keyboard="false"
+        tabindex="-1"
+        aria-labelledby="staticBackdropLabel"
+        aria-hidden="true"
+      >
+        <div className="modal-dialog modal-dialog-centered">
+          <div className="modal-content">
+            <div className="modal-body">
+              <div className="d-flex flex-column justify-content-center align-items-center modal-main">
+                <div className="upper-modal">
+                  <img
+                    src={confetti}
+                    alt="confetti image"
+                    width="230px"
+                    height="258px"
+                  ></img>
+                  <h5>ჩანაწერი დამატებულია!</h5>
+                </div>
+                <div className="d-flex flex-column lower-modal">
+                  <button className="btn form-button">სიაში გადაყვანა</button>
+                  <button type className="btn form-button-back">
+                    მთავარი
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
   );
 }
