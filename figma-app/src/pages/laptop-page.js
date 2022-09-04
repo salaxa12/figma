@@ -1,7 +1,8 @@
-import React from "react";
+import React, { useCallback } from "react";
 import "./styles/laptop-page.css";
 import back from "../media/back-icon.png";
 import laptopPhoto from "../media/laptop-photo-ex.png";
+import { useNavigate, Link } from "react-router-dom";
 
 const Entry = (props) => {
   return (
@@ -13,10 +14,15 @@ const Entry = (props) => {
 };
 
 export default function LaptopPage() {
+  const navigate = useNavigate();
+  const linkLanding = useCallback(() => navigate("/", { replace: true }), [
+    navigate,
+  ]);
+
   return (
     <div>
       <nav className="justify-content-center col-12">
-        <button className="btn back-button">
+        <button className="btn back-button" onClick={linkLanding}>
           <img src={back} alt="back icon" width="9.21px" height="16px"></img>
         </button>
         <h2 className="text-center laptop-page-title">ᲚᲔᲞᲢᲝᲞᲘᲡ ᲘᲜᲤᲝ</h2>

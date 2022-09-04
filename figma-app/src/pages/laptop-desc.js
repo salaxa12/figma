@@ -1,5 +1,6 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useCallback } from "react";
 import { useDropzone } from "react-dropzone";
+import { useNavigate, Link } from "react-router-dom";
 import "./styles/laptop-desc.css";
 import logo from "../media/LOGO-2.png";
 import success from "../media/success.png";
@@ -8,6 +9,21 @@ import back from "../media/back-icon.png";
 import confetti from "../media/confetti.png";
 
 export default function LaptopDesc(props) {
+  const navigate = useNavigate();
+
+  const linkEmployee = useCallback(
+    () => navigate("/employee", { replace: true }),
+    [navigate]
+  );
+
+  const linkLanding = useCallback(() => navigate("/", { replace: true }), [
+    navigate,
+  ]);
+
+  const linkList = useCallback(() => navigate("/list", { replace: true }), [
+    navigate,
+  ]);
+
   function bytesToSize(bytes) {
     var sizes = ["Bytes", "KB", "MB", "GB", "TB"];
     if (bytes == 0) return "0 Byte";
@@ -58,16 +74,17 @@ export default function LaptopDesc(props) {
   return (
     <div className="d-flex flex-column align-items-center justify-content-center container">
       <nav className="justify-content-center col-12">
-        <button className="btn back-button">
+        <button className="btn back-button" onClick={linkLanding}>
           <img src={back} alt="back icon" width="9.21px" height="16px"></img>
         </button>
-        <a href="#" className="nav-link text-center inactive-page">
-          თანამშრომლის ინფო
-        </a>
 
-        <a href="#" className="nav-link text-center laptop-desc">
+        <Link to="/employee" className="nav-link text-center inactive-page">
+          თანამშრომლის ინფო
+        </Link>
+
+        <Link to="/addLaptop" className="nav-link text-center laptop-desc">
           ლ<span>ეპტოპის მახასიათებელ</span>ი
-        </a>
+        </Link>
 
         <p
           className="align-item-center text-center page-marker"
@@ -389,7 +406,11 @@ export default function LaptopDesc(props) {
             >
               შემდეგი
             </button>
-            <button type className="btn form-button-back">
+            <button
+              type
+              className="btn form-button-back"
+              onClick={linkEmployee}
+            >
               უკან
             </button>
           </div>
@@ -423,8 +444,21 @@ export default function LaptopDesc(props) {
                   <h5>ჩანაწერი დამატებულია!</h5>
                 </div>
                 <div className="d-flex flex-column lower-modal">
-                  <button className="btn form-button">სიაში გადაყვანა</button>
-                  <button type className="btn form-button-back">
+                  <button
+                    className="btn form-button"
+                    data-bs-dismiss="modal"
+                    aria-label="Close"
+                    onClick={linkList}
+                  >
+                    სიაში გადაყვანა
+                  </button>
+                  <button
+                    type
+                    className="btn form-button-back"
+                    data-bs-dismiss="modal"
+                    aria-label="Close"
+                    onClick={linkLanding}
+                  >
                     მთავარი
                   </button>
                 </div>

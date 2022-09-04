@@ -1,3 +1,13 @@
+@font-face {
+  font-family: helveticaNeue;
+  font-weight: normal;
+  src: url("./HelveticaNeue.ttc");
+}
+
+* {
+  font-family: helveticaNeue;
+}
+
 .landing-banner {
   height: 50vh;
 }

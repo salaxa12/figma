@@ -1,22 +1,35 @@
-import React from "react";
+import React, { useCallback } from "react";
 import "./styles/employee-info.css";
 import logo from "../media/LOGO-2.png";
 import back from "../media/back-icon.png";
+import { useNavigate, Link } from "react-router-dom";
 
-function employeeInfo(props) {
+function EmployeeInfo(props) {
+  const navigate = useNavigate();
+
+  const linkLanding = useCallback(() => navigate("/", { replace: true }), [
+    navigate,
+  ]);
+
+  const linkLaptopDesc = useCallback(
+    () => navigate("/addLaptop", { replace: true }),
+    [navigate]
+  );
+
   return (
     <div className="d-flex flex-column align-items-center justify-content-center container">
       <nav className="justify-content-center col-12">
-        <button className="btn back-button">
+        <button className="btn back-button" onClick={linkLanding}>
           <img src={back} alt="back icon" width="9.21px" height="16px"></img>
         </button>
-        <a href="#" className="nav-link text-center">
-          თ<span>ანამშრომლის ინფ</span>ო
-        </a>
 
-        <a href="#" className="nav-link text-center inactive-page">
+        <Link to="/employee" className="nav-link text-center">
+          თ<span>ანამშრომლის ინფ</span>ო
+        </Link>
+
+        <Link to="/addLaptop" className="nav-link text-center inactive-page">
           ლეპტოპის მახასიათებელი
-        </a>
+        </Link>
 
         <p
           className="align-item-center text-center page-marker"
@@ -130,7 +143,9 @@ function employeeInfo(props) {
           </div>
 
           <div className="d-flex flex-row-reverse col-12 form-segment">
-            <button className="btn form-button">შემდეგი</button>
+            <button className="btn form-button" onClick={linkLaptopDesc}>
+              შემდეგი
+            </button>
           </div>
         </form>
       </div>
@@ -141,4 +156,4 @@ function employeeInfo(props) {
   );
 }
 
-export default employeeInfo;
+export default EmployeeInfo;
