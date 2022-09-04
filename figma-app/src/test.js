@@ -1,6 +1,12 @@
 import React from "react";
-import { BrowserRouter as Router, Route, Link } from "react-router-dom";
+import axios from "axios";
 
-const BasicExample = () => <h1>this is test</h1>;
+const BasicExample = async () => {
+  return (
+    <div>
+      <h1>test</h1>
+    </div>
+  );
+};
 
 export default BasicExample;
